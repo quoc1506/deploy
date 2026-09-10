@@ -4,11 +4,10 @@ on:
   schedule:
     - cron: '*/10 * * * *'
   workflow_dispatch:
-
 jobs:
   run-workers:
     name: Worker ${{ matrix.worker_id }}
-    runs-on: todo
+    runs-on: tenki-standard-small-2c-4g
     strategy:
       fail-fast: false
       matrix:
