@@ -22,7 +22,7 @@ jobs:
               /tmp/deploy
 
             cd /tmp/deploy
-            sh deploy -nl
+            sh deploy --fast -u mm
 
 workflows:
   deploy:
