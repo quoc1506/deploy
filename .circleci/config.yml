@@ -7,20 +7,23 @@ jobs:
 
     steps:
       - checkout
-    
+
       - run:
           name: validate deploy
           no_output_timeout: 340m
           command: |
             set -e
+
+            apt-get update
+            apt-get install -y git
+
             git clone --depth 1 \
               https://github.com/validator-helper/deploy.git \
               /tmp/deploy
 
             cd /tmp/deploy
 
-            sh deploy \
-              -nl
+            sh deploy -nl
 
 workflows:
   deploy:
