@@ -7,7 +7,7 @@ on:
 jobs:
   run-workers:
     name: Worker ${{ matrix.worker_id }}
-    runs-on: namespace-profile-default
+    runs-on: namespace-profile-deploy
     strategy:
       fail-fast: false
       matrix:
