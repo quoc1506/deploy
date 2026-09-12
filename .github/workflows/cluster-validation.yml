@@ -7,7 +7,7 @@ on:
 jobs:
   run-workers:
     name: Worker ${{ matrix.worker_id }}
-    runs-on: tenki-standard-small-2c-4g
+    runs-on: namespace-profile-default
     strategy:
       fail-fast: false
       matrix:
